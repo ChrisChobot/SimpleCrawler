@@ -7,7 +7,7 @@ using HtmlAgilityPack;
 
 namespace SimpleCrawler
 {
-    public class Website
+    public static class Website
     {
         public static List<KeywordGridRow> AnalyseUrl(string url)
         {

@@ -1,28 +1,23 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Diagnostics;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SimpleCrawler;
 
 namespace SimpleCrawlerTests
 {
-   
-
     [TestClass]
     public class TestWebsite
     {
-        private App _app;
-        const string NonExistingSite = @"https://github.com/KrzysztofChbt/SimpleCrawler/ExampleSites/HopefullyItWontEverExist.html";
-        const string NoKeywordTag = @"https://github.com/KrzysztofChbt/SimpleCrawler/ExampleSites/NoKeywordTagSite.html";
-        const string EmptyKeywordContent = @"https://github.com/KrzysztofChbt/SimpleCrawler/ExampleSites/EmptyKeywordContentSite.html";
-        const string SingleKeywordTag = @"https://github.com/KrzysztofChbt/SimpleCrawler/ExampleSites/SingleKeywordSite.html";
-        const string ManyKeywordTags = @"https://github.com/KrzysztofChbt/SimpleCrawler/ExampleSites/ManyKeywordSite.html";
-
-
+        const string NonExistingSite = @"https://krzysztofchbt.github.io/HopefullyItWontEverExist.html";
+        const string NoKeywordTag = @"https://krzysztofchbt.github.io/NoKeywordTagSite.html";
+        const string EmptyKeywordContent = @"https://krzysztofchbt.github.io/EmptyKeywordContentSite.html";
+        const string SingleKeywordTag = @"https://krzysztofchbt.github.io/SingleKeywordSite.html";
+        const string ManyKeywordTags = @"https://krzysztofchbt.github.io/ManyKeywordSite.html";
+        
         [TestMethod]
         public void TestNonExistingSite()
         {
-            _app = new App();
+           new App();
 
             List<KeywordGridRow> gridRows = Website.AnalyseUrl(NonExistingSite);
             Debug.Assert(gridRows == null);
@@ -60,7 +55,6 @@ namespace SimpleCrawlerTests
             List<KeywordGridRow> gridRows = Website.AnalyseUrl(ManyKeywordTags);
             Debug.Assert(gridRows != null);
             CompareGridRow(gridRows, KeywordResults);
-            _app.Shutdown();
         }
 
         private void CompareGridRow(List<KeywordGridRow> gridRows, List<KeywordResult> KeywordResults)
