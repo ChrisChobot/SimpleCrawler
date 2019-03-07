@@ -54,11 +54,11 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="TestWebsite.cs" />
+    <Compile Include="Scripts\TestWebsite.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
+    <None Include="Configs\packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SimpleCrawler\SimpleCrawler.csproj">
