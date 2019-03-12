@@ -8,11 +8,11 @@ namespace SimpleCrawlerTests
     [TestClass]
     public class TestWebsite
     {
-        const string NonExistingSite = @"https://krzysztofchbt.github.io/HopefullyItWontEverExist.html";
-        const string NoKeywordTag = @"https://krzysztofchbt.github.io/NoKeywordTagSite.html";
-        const string EmptyKeywordContent = @"https://krzysztofchbt.github.io/EmptyKeywordContentSite.html";
-        const string SingleKeywordTag = @"https://krzysztofchbt.github.io/SingleKeywordSite.html";
-        const string ManyKeywordTags = @"https://krzysztofchbt.github.io/ManyKeywordSite.html";
+        const string NonExistingSite = @"https://krzysztofchbt.github.io/SimpleCrawlerTests/HopefullyItWontEverExist.html";
+        const string NoKeywordTag = @"https://krzysztofchbt.github.io/SimpleCrawlerTests/NoKeywordTagSite.html";
+        const string EmptyKeywordContent = @"https://krzysztofchbt.github.io/SimpleCrawlerTests/EmptyKeywordContentSite.html";
+        const string SingleKeywordTag = @"https://krzysztofchbt.github.io/SimpleCrawlerTests/SingleKeywordSite.html";
+        const string ManyKeywordTags = @"https://krzysztofchbt.github.io/SimpleCrawlerTests/ManyKeywordSite.html";
         
         [TestMethod]
         public void TestNonExistingSite()
