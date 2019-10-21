@@ -19,12 +19,11 @@ namespace SimpleCrawler
         {
             MainWindow mainWindow = null;
 
-            if (Application.Current.MainWindow is MainWindow)
+            if (Application.Current != null && Application.Current.MainWindow is MainWindow)
             {
                 mainWindow = Application.Current.MainWindow as MainWindow;
+                _errorBox = mainWindow?.ErrorBox;
             }
-
-            _errorBox = mainWindow?.ErrorBox;
         }        
     }
 }
